@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=PT+Serif:400,700|Playfair+Display:900,400,400i" rel="stylesheet">
+    
+    <link rel="stylesheet" href="index.css">
+   
+    <title>Navodaya Clinics</title>
+</head>
+<body>
+    <style>
+        *{
+         overflow-x: hidden;
+         padding: 0;
+         margin: 0;
+            }
+        nav{
+         height: 12vh;
+         width: 100vw;
+         position: fixed;
+         z-index: 1;
+         background-color: #f1f2f6;
+        }
+        .nav-adjuster{
+            height: 7vh;
+            width: 100vw;
+            padding-top: 2.5vh;
+            font-weight: 900;
+            font-family: 'Playfair Display', serif;
+        }
+        .hamburger{
+            margin-left:6vw;
+            margin-right: 27vw;
+                 }
+                 .hamburger1 {
+    margin-left: 2vw;
+    margin-right: 3vw;
+}
+        .logo-main{
+            font-size: 2em; 
+        }
+        
+        
+        .hamburgerIcon{
+                height: 3vh;
+                width: 8vw;
+        }
+        .main-background{
+            background-repeat: no-repeat;
+            background-image: linear-gradient(to right, rgba(217,217,217,1) 0%, rgba(201,201,201,0.66) 34%, rgba(166,166,166,0) 100%), url("main_backgroung.jpg");
+            background-size: 50vh 100vw;
+            height: 50vh;
+            width: 100vw;
+             }
+        
+        header{
+            font-family: 'Playfair Display', serif;
+        }
+        .header-text{
+            padding-left: 50%;
+        }
+        .header-main{
+            font-family: 'PT Serif', serif;
+            font-weight: 700;
+            font-size: 2rem;    
+            margin-top: 20vh;
+            height: 29vh;
+            width: 100vw;
+            display: inline-block;
+        }
+        .header-text-sml{
+            font-size: 1rem;
+            font-weight: 400;
+        }
+        .side-bar{
+            position: fixed;
+            height:100vh;
+            width:0vw;
+            z-index: 3;
+            background-color: #f1f2f6;
+            transition: width 0.5s;
+            box-shadow:1px 1px 10px grey;
+        }
+        .open-side-bar{
+            width:58vw;
+        }
+        ul{
+            list-style-type: none;
+            text-align:center;
+        }
+        ul li{
+            padding:1rem;
+        }
+        a{
+            text-decoration: none;
+        }
+        .side-bar hr{
+           border-style:ridge;
+           }
+       .side-bar-back{
+           padding: 1rem;
+           font-size: 1.75rem;
+           text-align:center;
+       }
+       .side-bar-header{
+            font-size:2rem;
+            font-style:bold;
+       }
+       .side-bar-text{
+            display: inline-block;
+           font-size:1.3rem;
+           color:black;
+           position:inherit;
+           font-family: 'Playfair Display', serif;
+           cursor: pointer;
+       }
+       .section-title{
+        font-size: 2.5rem;
+        margin: o auto;
+        padding-bottom: 1rem;
+        letter-spacing: 2px;
+        border-bottom: dashed #f1f2f6;   
+        font-weight: 400;   
+        text-align: center;
+        font-family: 'Playfair Display', serif;   
+       }
+       .div-section{
+        padding-top: 2rem;
+        width:100vw; 
+       }
+       .doctor-section5,.doctor-section1,.doctor-section2,.doctor-section3,.doctor-section4{
+        width: 100vw;
+        background-color: #f1f2f6;
+        padding-top: 1rem;
+       }
+       .doctor-section-container{
+        overflow-y: hidden;
+        background-color: white;
+        box-shadow: 5px 11px 53px 0px rgba(172,173,176,1);
+        margin: 2rem;
+        border: solid #a9aac6;
+        padding-bottom: 2rem; 
+        width: calc(100% - 4rem); 
+       }
+       .doctor-picture{
+           background-image: url('Rashmi.jpeg');
+           background-size: 8rem 8rem;
+           background-repeat: no-repeat; 
+           height: 8rem;
+           width: 6rem; 
+           margin-left: calc(50% - 3rem);
+           margin-top: 2rem;
+           border-radius: 4rem;
+       }
+       .doctor-picture1{
+           background-image: url('Chetan.jpeg');
+           background-size: 8rem 8rem;
+           background-repeat: no-repeat; 
+           height: 8rem;
+           width: 6rem; 
+           margin-left: calc(50% - 3rem);
+           margin-top: 2rem;
+           border-radius: 4rem;
+       } 
+       .doctor-name{
+        font-size: 1.5rem;    
+        font-family: 'Playfair Display', serif;
+        font-style: italic;
+        width:100%;
+        text-align: center;   
+        margin-top: 3vh;
+       }
+       .doctor-content{
+            width: 90%;
+            height: 40%;
+            margin-left: 5%;
+            font-family: 'Playfair Display', serif;
+            margin-top: 3vh;
+       }
+       .facility-picture{    
+    width: 70vw;
+    margin-top: 4vh;
+    padding-top: 2vh;
+    height: 25vh;
+    margin-left: 3vh;
+    border: solid #a9aac6;
+    background-image: url(beds.jpeg);
+    background-repeat: no-repeat;
+    background-size: 70vw 29vh;
+       }
+       .facility-picture-rooms{
+        background-image: url(rooms.jpeg);
+       }
+       .facility-picture-pharmacy{
+           background-image: url('pharmacy.jpeg');
+       }
+       .footer-container{
+           background-color: white;
+           width: 100vw;
+       }
+       .address-container{
+         width: 100vw;
+         height: 20vh;
+         padding-top: 3vh;
+        text-align: center;
+       }
+       #google-map-container{
+        height: 20vh;
+        width: 80vw;
+        padding-bottom: 5vh;
+        margin-left: 14vw;
+        margin-right: 14vw;
+          }
+          .footer-title{
+    width:100vw;
+    text-align: center;
+    color: black;
+     font-size: 2rem;
+     padding-bottom: 0.5rem;
+        letter-spacing: 2px;
+        border-bottom: dashed #f1f2f6;   
+        font-weight: 400; 
+        font-family: 'Playfair Display', serif;
+}
+.contact-footer{
+    height:15rem;
+    background-color: #f1f2f6;
+    margin-top: 4rem;
+}
+.footer-logo-container{
+    height: 15vh;
+    width: 100vw;
+    padding-left: 10vw; 
+    margin-top: 3vh;  
+}
+.footer-logo{
+    margin-right: 5.5vw;
+    margin-left: 2.5vw;
+    height: 75px;
+    width: 75px;    
+    background-size: cover;  
+    background-repeat: no-repeat;  
+    display: inline-block;
+}
+#facebook-logo{
+    background-image: url("facebook.png");
+}
+#instagram-logo{
+    background-image: url("instagram.png");
+}
+#telephone-logo{
+    background-image: url("telephone.png");
+}
+@media only screen and (min-width:500px){
+            .hamburger{
+                margin-right: 31.5vw;
+            }
+            .main-background{
+                height: 95vh;
+            }
+            .header-text{
+                margin-top:40vh;
+                font-size: 3rem;
+            }
+            .header-text-sml{
+                font-size: 1.7rem;
+                color: grey;
+            }
+            .doctor-section1{
+                float:left;
+                width: 40vw;
+                margin-left: 5%;
+            }
+            .doctor-section2{
+                float: right;
+                width: 40vw;
+                margin-right: 5%;
+            }
+            .doctor-main-container{
+                background-color:#f1f2f6;
+                padding-bottom: 3%;
+            }
+            .doctor-section3{
+                margin-left: 5%;
+                float:left;
+                width:40vw;
+            }
+            .doctor-section4{
+                margin-right: 5%;
+                float: right;
+                width: 40vw;
+            }
+            .facility-picture{
+                width: 400px;
+            }
+            .doctor-section5{
+                width:40vw;
+                padding-left: 30vw;
+                padding-right: 30vw;
+                padding-bottom: 3%;
+            }
+            #google-map-container{
+                height:65vh;
+                padding-bottom: 0;
+            }
+            iframe{
+                width: 50vw;
+                height: 50vh;
+                margin-left: 12vw;
+            }
+            .contact-footer{
+                margin-top:0;
+                padding-top: 3%;
+                
+            }
+            .footer-logo-container{
+                margin-left: 20vw;
+                margin-top: 10vh;
+            }
+    </style>
+     <div class="side-bar">
+        <div class="side-bar-back">
+        <span class="side-bar-header"> MENU </span>    
+        <hr>
+    </div> 
+       <script>
+           
+       </script>
+        <ul>
+            <li> <a class="side-bar-text hamburger1">Back</a> <hr> </li>
+            <li> <a class="side-bar-text " href="#doctors" onclick="slide_back()">Doctors</a> <hr> </li>
+            <li> <a class="side-bar-text " href="#facilities" onclick="slide_back()">Facilities</a> <hr> </li>
+            <li> <a class="side-bar-text" href="#pharmacy" onclick="slide_back()">Pharmacy</a> <hr> </li>
+            <li> <a class="side-bar-text" href="/photo_gallery">Photo Gallery</a> <hr> </li>
+            <li> <a class="side-bar-text" href="/video_gallery">Video Gallery</a> <hr> </li>
+            <li> <a class="side-bar-text"  href="tel:080-27524842">Contact</a> <hr> </li>
+        </ul>
+    </div>
+    <nav>
+        <div class="nav-adjuster">
+        <span class="hamburger">
+                <img class = "hamburgerIcon" src="Asset 1.svg" alt="menu">
+        </span>
+        <span class="logo-main">NH.</span>    
+    </nav>
+    <header>
+        <div class="main-background">
+            <div class="header-text header-main">
+            <span>Navodaya </span> <br>   Hospital <br>   
+            <span class="header-text-sml">Here to serve</span>    
+            </div>
+        </div>
+       <div class="div-section"> 
+            <span id="doctors">
+                </span>
+        <div class="section-title">  Doctors</div>   
+         </div>
+         <div class="doctor-main-container">
+         <div class="doctor-section1">
+         <div class="doctor-section-container">
+             <div class="doctor-picture"></div>
+             <div class="doctor-name">Dr.Rashmi Temker</div>
+             <div class="doctor-content">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec posuere, nisl eget lacinia pulvinar, 
+                    orci neque bibendum arcu, a sodales lorem est vitae orci. Phasellus quam purus,
+                     malesuada nec laoreet a, ullamcorper sed erat. 
+                    Suspendisse ultrices risus sed posuere faucibus.
+             </div> 
+         </div>
+        </div>
+         
+        <div class="doctor-section2">
+                <div class="doctor-section-container">
+                    <div class="doctor-picture1"></div>
+                    <div class="doctor-name">Dr.Chetan Temker</div>
+                    <div class="doctor-content">
+                           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec posuere, nisl eget lacinia pulvinar, 
+                           orci neque bibendum arcu, a sodales lorem est vitae orci. Phasellus quam purus,
+                            malesuada nec laoreet a, ullamcorper sed erat. 
+                           Suspendisse ultrices risus sed posuere faucibus.
+                    </div> 
+                </div>
+               </div>
+            </div>
+               <div class="div-section"> 
+                    <span id="facilities">
+                        </span>
+                <div class="section-title">Facilities</div>   
+                 </div>
+                 <div class="doctor-main-container">
+                 <div class="doctor-section3">
+                    <div class="doctor-section-container">
+                        <div class="facility-picture">
+                        </div>
+                        <div class="doctor-name">Casualty Beds</div>
+                        <div class="doctor-content">
+                               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec posuere, nisl eget lacinia pulvinar, 
+                               orci neque bibendum arcu, a sodales lorem est vitae orci. Phasellus quam purus,
+                                malesuada nec laoreet a, ullamcorper sed erat. 
+                               Suspendisse ultrices risus sed posuere faucibus.
+                        </div> 
+                    </div>
+                   </div>
+                   
+                   <div class="doctor-section4">
+                        <div class="doctor-section-container">
+                            <div class="facility-picture-rooms facility-picture">
+                            </div>
+                            <div class="doctor-name">World-Class Consultation Rooms</div>
+                            <div class="doctor-content">
+                                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec posuere, nisl eget lacinia pulvinar, 
+                                   orci neque bibendum arcu, a sodales lorem est vitae orci. Phasellus quam purus,
+                                    malesuada nec laoreet a, ullamcorper sed erat. 
+                                   Suspendisse ultrices risus sed posuere faucibus.
+                            </div> 
+                        </div>
+                       </div>
+                    </div>
+                       <div class="div-section"> 
+                            <span id="pharmacy">
+                                </span>
+                        <div class="section-title">Pharmacy</div>   
+                         </div>
+                   <div class="doctor-section5">
+                    <div class="doctor-section-container">
+                        <div class="facility-picture facility-picture-pharmacy">
+                        </div>
+                        
+                            
+                        <div class="doctor-name">Pharmacy</div>
+                        <div class="doctor-content">
+                               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec posuere, nisl eget lacinia pulvinar, 
+                               orci neque bibendum arcu, a sodales lorem est vitae orci. Phasellus quam purus,
+                                malesuada nec laoreet a, ullamcorper sed erat. 
+                               Suspendisse ultrices risus sed posuere faucibus.
+                        </div> 
+                    </div>
+                   </div>
+                 
+                   <footer>
+                       <div class="footer-container">
+                        <div class="div-section"> 
+                            <div id="location"></div>
+                            <div class="section-title">  Location </div>   
+                             </div>
+                             <div class="address-container">
+                             <div class="address">
+                             Address: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab doloremque facere aut adipisci illo fuga laborum 
+                             aliquid ipsum aspernatur sit eius ad, 
+                             deleniti perferendis porro quibusdam eligendi dicta molestiae officiis. </div>
+                            </div>
+                            <div id="google-map-container">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15578.360954300018!2d77.4205463!3d12.5432823!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd7b3aebe89861a90!2sNavodaya+Arogya+Kendra!5e0!3m2!1sen!2sin!4v1539763328967"
+                            frameborder="0" style="border:0" allowfullscreen></iframe>
+                            </div>
+                       </div>
+                       <div class="contact-footer">
+                         <div class=" footer-title">Connect with us</div> 
+                         <div class="footer-logo-container">
+                             <div class="footer-logo" id="facebook-logo"></div>
+                             <div class="footer-logo" id="instagram-logo"></div>
+                             <div class="footer-logo" id="telephone-logo"></div>
+                         </div>
+                       </div>
+                   </footer>
+    </header>
+    </div>  
+
+    <script>
+   
+    var menuButton = document.getElementsByClassName("hamburger")[0];
+    var sideBar = document.getElementsByClassName("side-bar")[0];
+    var sideBarBack = document.getElementsByClassName("hamburger1")[0];
+   menuButton.addEventListener('click',function(){
+        // sideBar.classList.add('open-side-bar');
+    if(window.screen.width<=500){
+            sideBar.style.width = '58vw';}
+        else
+        {
+            sideBar.style.width = '18vw'}
+        });
+    
+    sideBarBack.addEventListener('click',function(){
+        // sideBar.classList.add('open-side-bar');
+        sideBar.style.width = '0vw';
+     });
+     function slide_back(){
+               sideBar.style.width = '0vw';
+           }
+               
+       var home_logo = document.getElementsByClassName("logo-main")[0];
+       home_logo.addEventListener('click',function(){
+          window.open("/"); 
+       });
+   
+    
+   </script>
+    <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "name": "navodaya",
+  "version": "1.0.0",
+  "description": "Hospitals",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Adarsh and Gaurav",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.339.0",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4"
+  }
+}
