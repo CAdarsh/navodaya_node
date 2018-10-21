@@ -50,26 +50,27 @@
         }
         .main-background{
             background-repeat: no-repeat;
-            background-image: linear-gradient(to right, rgba(217,217,217,1) 0%, rgba(201,201,201,0.66) 34%, rgba(166,166,166,0) 100%), url("main_backgroung.jpg");
-            background-size: 50vh 100vw;
+            background-image:  url("Background_Compressed.jpg");
+            background-size: cover;
             height: 50vh;
             width: 100vw;
+            margin-top: 10vh;
              }
         
         header{
             font-family: 'Playfair Display', serif;
         }
         .header-text{
-            padding-left: 50%;
+            padding-left: 60%;
         }
         .header-main{
             font-family: 'PT Serif', serif;
-            font-weight: 700;
-            font-size: 2rem;    
-            margin-top: 20vh;
-            height: 29vh;
-            width: 100vw;
-            display: inline-block;
+    font-weight: 700;
+    font-size: 2rem;
+    margin-top: 23vh;
+    height: 29vh;
+    width: 100vw;
+    display: inline-block;
         }
         .header-text-sml{
             font-size: 1rem;
@@ -146,24 +147,25 @@
         width: calc(100% - 4rem); 
        }
        .doctor-picture{
-           background-image: url('Rashmi.jpeg');
-           background-size: 8rem 8rem;
-           background-repeat: no-repeat; 
-           height: 8rem;
-           width: 6rem; 
-           margin-left: calc(50% - 3rem);
-           margin-top: 2rem;
-           border-radius: 4rem;
+        background-image: url(Rashmi_Compressed.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 16rem;
+    width: 12rem;
+    margin-left: calc(50% - 6rem);
+    margin-top: 2rem;
+    border-radius: 4rem;
        }
        .doctor-picture1{
-           background-image: url('Chetan.jpeg');
-           background-size: 8rem 8rem;
-           background-repeat: no-repeat; 
-           height: 8rem;
-           width: 6rem; 
-           margin-left: calc(50% - 3rem);
-           margin-top: 2rem;
-           border-radius: 4rem;
+        background-image: url(Chetan_Compressed.jpg);
+       
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 16rem;
+    width: 12rem;
+    margin-left: calc(50% - 6rem);
+    margin-top: 2rem;
+    border-radius: 4rem;
        } 
        .doctor-name{
         font-size: 1.5rem;    
@@ -174,30 +176,32 @@
         margin-top: 3vh;
        }
        .doctor-content{
-            line-height: 1.5;
+       text-align: center;
+       line-height: 1.5;
             width: 90%;
             height: 40%;
             margin-left: 5%;
             font-family: 'Playfair Display', serif;
             margin-top: 2vh;
-    text-align: center;
        }
        .facility-picture{    
-    width: 70vw;
+        width: 70vw;
     margin-top: 4vh;
     padding-top: 2vh;
     height: 25vh;
     margin-left: 3vh;
     border: solid #a9aac6;
-    background-image: url(beds.jpeg);
+    background-image: url(Wards_Compressed.jpg);
     background-repeat: no-repeat;
-    background-size: 70vw 29vh;
+    background-size: cover; 
        }
        .facility-picture-rooms{
-        background-image: url(rooms.jpeg);
+        background-image: url(Consultancy_Compressed.jpg);
+        background-size: cover; 
        }
        .facility-picture-pharmacy{
-           background-image: url('pharmacy.jpeg');
+           background-image: url('Pharmacy_Compressed.jpg');
+           background-size: cover; 
        }
        .footer-container{
            background-color: white;
@@ -205,7 +209,7 @@
        }
        .address-container{
          width: 100vw;
-         height: 20vh;
+         height: 11vh;
          padding-top: 3vh;
         text-align: center;
        }
@@ -228,9 +232,10 @@
         font-family: 'Playfair Display', serif;
 }
 .contact-footer{
-    height:15rem;
+    height: 15rem;
     background-color: #f1f2f6;
-    margin-top: 4rem;
+    margin-top: 0rem;
+    padding-top: 2rem;
 }
 .footer-logo-container{
     height: 15vh;
@@ -260,12 +265,20 @@
             .hamburger{
                 margin-right: 31.5vw;
             }
-            .main-background{
-                height: 95vh;
-            }
+            
+        .main-background{
+            background-repeat: no-repeat;
+            background-image: url("Background_Compressed.jpg");
+            background-size: cover;
+            height: 100vh;
+            width: 100vw;
+            margin-top: 10vh;
+             }
             .header-text{
-                margin-top:40vh;
-                font-size: 3rem;
+                margin-top: 46vh;
+                font-size: 5rem;
+                padding-left: 70vw;
+                height: 49vh;
             }
             .header-text-sml{
                 font-size: 1.7rem;
@@ -296,7 +309,9 @@
                 width: 40vw;
             }
             .facility-picture{
-                width: 400px;
+                width: 27vw;
+               margin: 5vh auto;
+}
             }
             .doctor-section5{
                 width:40vw;
@@ -316,7 +331,6 @@
             .contact-footer{
                 margin-top:0;
                 padding-top: 3%;
-                
             }
             .footer-logo-container{
                 margin-left: 20vw;
@@ -328,16 +342,14 @@
         <span class="side-bar-header"> MENU </span>    
         <hr>
     </div> 
-       <script>
-           
-       </script>
+       
         <ul>
             <li> <a class="side-bar-text hamburger1">Back</a> <hr> </li>
-            <li> <a class="side-bar-text " href="#doctors" onclick="slide_back()">Doctors</a> <hr> </li>
-            <li> <a class="side-bar-text " href="#facilities" onclick="slide_back()">Facilities</a> <hr> </li>
+            <li> <a class="side-bar-text" href="#doctors" onclick="slide_back()">Doctors</a> <hr> </li>
+            <li> <a class="side-bar-text" href="#facilities" onclick="slide_back()">Facilities</a> <hr> </li>
             <li> <a class="side-bar-text" href="#pharmacy" onclick="slide_back()">Pharmacy</a> <hr> </li>
-            <li> <a class="side-bar-text" href="/photo_gallery">Photo Gallery</a> <hr> </li>
-            <li> <a class="side-bar-text" href="/video_gallery">Video Gallery</a> <hr> </li>
+            <li> <a class="side-bar-text" href="photo_gallery_static_files/photo_gallery.html" onclick="slide_back()">Photo Gallery</a> <hr> </li>
+            <li> <a class="side-bar-text" href="video_gallery_static_files/video_gallery.html" onclick="slide_back()">Video Gallery</a> <hr> </li>
             <li> <a class="side-bar-text"  href="tel:080-27524842">Contact</a> <hr> </li>
         </ul>
     </div>
@@ -351,8 +363,8 @@
     <header>
         <div class="main-background">
             <div class="header-text header-main">
-            <span>Navodaya </span> <br>   Hospital <br>   
-            <span class="header-text-sml">Here to serve</span>    
+            <span>Navodaya </span> <br>   Arogya <br> Kendra<br>  
+                
             </div>
         </div>
        <div class="div-section"> 
@@ -376,7 +388,7 @@
                     <div class="doctor-picture1"></div>
                     <div class="doctor-name">Dr.Chetan Temker</div>
                     <div class="doctor-content">
-                          M.B.B.S., D.L.O., FAGE., MD.RC 
+                        M.B.B.S., D.L.O., FAGE., MD.RC
                     </div> 
                 </div>
                </div>
@@ -393,7 +405,8 @@
                         </div>
                         <div class="doctor-name">General Wards</div>
                         <div class="doctor-content">
-                               Five beds well spaced seperated by white screen. Well equipped for admissions and over night care.
+                             
+                            Five beds well spaced seperated by white screen. Well equipped for admissions and over night care.
                                Seperate wards for male and female are available. 
                         </div> 
                     </div>
@@ -405,7 +418,7 @@
                             </div>
                             <div class="doctor-name">Consultation Rooms</div>
                             <div class="doctor-content">
-                                   Designed for proper patient and doctor interaction.
+                                Designed for proper patient and doctor interaction.
                             </div> 
                         </div>
                        </div>
@@ -423,7 +436,7 @@
                             
                         <div class="doctor-name">Pharmacy</div>
                         <div class="doctor-content">
-                                    Well stocked pharmacy for convinient purchase of medicines prescribed by the doctor.
+                            Well stocked pharmacy for convinient purchase of medicines prescribed by the doctor.
                                     Open from 10 A.M to 10 P.M. <br>
                                     Will be open 24 hours soon
                         </div> 
@@ -438,7 +451,8 @@
                              </div>
                              <div class="address-container">
                              <div class="address">
-                             Address: Ground Floor MG Complex, Kanakapura Main Road, Kanakapura Ramanagara District -562117  </div>
+                             
+                                Address: Ground Floor MG Complex, Kanakapura Main Road, Kanakapura Ramanagara District -562117  </div>
                             </div>
                             <div id="google-map-container">
                                 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15578.360954300018!2d77.4205463!3d12.5432823!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd7b3aebe89861a90!2sNavodaya+Arogya+Kendra!5e0!3m2!1sen!2sin!4v1539763328967"
@@ -458,12 +472,13 @@
     </div>  
 
     <script>
-   document.getElementById("facebook-logo").addEventListener("click",function(){
+        document.getElementById("facebook-logo").addEventListener("click",function(){
       window.location = "https://www.facebook.com/navodaya.arogyakendra.90"; 
    });
    document.getElementById("instagram-logo").addEventListener("click",function(){
       window.location = "https://www.instagram.com/navodaya_kkp/"; 
    });
+   
     var menuButton = document.getElementsByClassName("hamburger")[0];
     var sideBar = document.getElementsByClassName("side-bar")[0];
     var sideBarBack = document.getElementsByClassName("hamburger1")[0];
@@ -475,22 +490,11 @@
         {
             sideBar.style.width = '18vw'}
         });
-    
+
     sideBarBack.addEventListener('click',function(){
         // sideBar.classList.add('open-side-bar');
         sideBar.style.width = '0vw';
      });
-     function slide_back(){
-               sideBar.style.width = '0vw';
-           }
-               
-       var home_logo = document.getElementsByClassName("logo-main")[0];
-       home_logo.addEventListener('click',function(){
-          window.open("/"); 
-       });
-   
-    
    </script>
-    
 </body>
 </html>
