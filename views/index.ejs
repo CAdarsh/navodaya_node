@@ -461,8 +461,8 @@
                          <div class=" footer-title">Connect with us</div> 
                          <div class="footer-logo-container">
                              <div class="footer-logo" id="facebook-logo"></div>
-                             <div class="footer-logo" id="instagram-logo"></div>
-                             <div class="footer-logo" id="telephone-logo"></div>
+                           <div class="footer-logo" id="instagram-logo"></div>  
+                           <a href="tel:080-27524842"><div class="footer-logo" id="telephone-logo"></div></a>
                          </div>
                        </div>
                    </footer>
@@ -470,7 +470,12 @@
     </div>  
 
     <script>
-   
+   document.getElementById("facebook-logo").addEventListener("click",function(){
+      window.location = "https://www.facebook.com/navodaya.arogyakendra.90"; 
+   });
+   document.getElementById("instagram-logo").addEventListener("click",function(){
+      window.location = "https://www.instagram.com/navodaya_kkp/"; 
+   });
     var menuButton = document.getElementsByClassName("hamburger")[0];
     var sideBar = document.getElementsByClassName("side-bar")[0];
     var sideBarBack = document.getElementsByClassName("hamburger1")[0];
@@ -498,6 +503,6 @@
    
     
    </script>
-    <script src="index.js"></script>
+    
 </body>
 </html>
