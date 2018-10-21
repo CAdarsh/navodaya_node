@@ -14,7 +14,9 @@
          padding: 0;
          margin: 0;
             }
-        
+        body{
+            background-color: #f1f2f6;
+        }
         nav{
          height: 12vh;
          width: 100vw;
@@ -42,9 +44,6 @@
         .logo-main{
             font-size: 2em; 
         }
-        
-           
-       
         .hamburgerIcon{
                 height: 3vh;
                 width: 8vw;
@@ -138,55 +137,60 @@
         padding-top: 2rem;
         margin-top: 10vh;
         width:100vw; 
+       } 
+       .image-container img,.image-container img{
+           width:80vw;
+           margin-top: 3%;
+           margin-left: 5%;
+           border-color: #aa99aa;
+           border-style: solid;
        }
-       .image-container-landscape{
-        height: 15rem;
-        width: 30rem;
+       .image-title{
+           text-align: center;
+           font-family: 'Lato', sans-serif;
+           font-style: italic;
+           margin-top: 2%;
        }
-       .image-container-landscape img{
-           height: 15rem;
-           width: 80vh; 
+       .image-text{
+           text-align: center;
+           margin-top: 2%;
+           margin-bottom: 2%;
+           font-size: 1.1rem;
+           font-family: 'Lato', sans-serif;
+           font-weight: 100;
        }
-       iframe{
-           top:0;
-           left: 0;
-           right:0;
-           bottom:0;
-           height: 30vh;
-           width: 80vw;
+       .container1,.container2{
+           margin-left: 5%;
+           margin-right: 5%;
+           margin-top: 3%;
+           border-color: #aa99aa;
+           border-style: solid;
+           background-color: white;
        }
-       .vid-title{
-        padding-top: 3rem;
-        padding-top: 3rem;
-        text-align: center;
-        padding-left: 06px;
-        padding-right: 06px;
-        padding-bottom: 1rem;
-        font-family: 'Lato', sans-serif;
-        font-weight: 400;
-        font-size: 2.4rem;
-}
-    .vid-caption{
-        letter-spacing: 0.4px;
-        line-height: 1.3rem;
-        padding-top: 3rem;
-        text-align: center;
-        padding-left: 2rem;
-        padding-right: 2rem;
-        padding-bottom: 1rem;
-        font-family: 'Lato', sans-serif;
-        font-weight: 300; 
+    @media only screen and (min-width:500px){
+        .image-container{
+            margin-left: 3%;
+        }
+        .image-container img{
+            width:40vw;
+            margin-left: 0;
+        }
+        .container1,.container2{
+            width: 43vw;
+        }
+        .image-text{
+            text-align: center;
+            margin-top: 2.5%;
+        }
+        .container1{
+            float: left;
+            margin-right: 0;
+        }
+        .container2{
+            float: right;
+            margin-left: 0;
+        }
     }
-    .whole-body{
-        position: fixed;
-        height: 100vh;
-        width: 100vw;
-        opacity: 0;
-        background-color: black;
-        transition: 1s opacity;
-    }
-   
-    
     </style>
    <div class="side-bar">
         <div class="side-bar-back">
@@ -210,50 +214,78 @@
         </span>
         <span class="logo-main">NH.</span>    
     </nav>
-    <div class="whole-body"> </div>
     <div class="div-section">  
         <div class="section-title">Photo Gallery</div>   
          </div>
-         <div class="vid-title">
-            The man himself
-         </div>
-
-     <div class="vid-caption">    Dr. Chetan    </div>
-    <div class="image-container-landscape">
-            <img src="DSC_0230.JPG" alt="landscape sample">
-</div>
-    <div class="vid-title">
-  New Video Out
+    <div class="container1">
+    <div class="image-title">
+        <h2>The Man Himself</h2>
     </div>
-    
-    <div class="vid-caption">
-        Verge Does it Again Lorem ipsum dolor sit amet consectetur, </div>
-    <div class="image-container-potrait">
+    <div class="image-container">
+        <div class="grid-item1"><img src="DSC_0230.JPG" alt="landscape sample"></div>
     </div>
-
-   <script>  
-        var menuButton = document.getElementsByClassName("hamburger")[0];
-        var sideBar = document.getElementsByClassName("side-bar")[0];
-        var sideBarBack = document.getElementsByClassName("hamburger1")[0];
-    
-       function slide_back(){
-               sideBar.style.width = '0vw';
-           }
-            var home_logo = document.getElementsByClassName("logo-main")[0];
-       home_logo.addEventListener('click',function(){
-          window.open("/"); 
-       });
-   
-       menuButton.addEventListener('click',function(){
-            // sideBar.classList.add('open-side-bar');
-           document.getElementsByClassName("whole-body")[0].style.opacity="0.4"; 
-           sideBar.style.width = '58vw'; });
-    
-        sideBarBack.addEventListener('click',function(){
-            // sideBar.classList.add('open-side-bar');
-            sideBar.style.width = '0vw';
-            document.getElementsByClassName("whole-body")[0].style.opacity="0"; 
-         });
-       </script>
+    <div class="image-text">
+        <p>
+                Lorem ipsum dolor sit amet, consMorbi suscipit nec diam ut elementum. Fusce sit amet ullamcorper nibh. Vestibulum sodales arcu nec viverra convallis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+        </p>
+    </div>
+    </div>
+    <div class="container2">
+            <div class="image-title">
+                <h2>The Man Himself</h2>
+            </div>
+            <div class="image-container">
+                <div class="grid-item1"><img src="DSC_0230.JPG" alt="landscape sample"></div>
+            </div>
+            <div class="image-text">
+                <p>
+                        Lorem ipsum dolor sit amet, consMorbi suscipit nec diam ut elementum. Fusce sit amet ullamcorper nibh. Vestibulum sodales arcu nec viverra convallis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+                </p>
+            </div>
+            </div>
+            <div class="container1">
+                <div class="image-title">
+                    <h2>The Man Himself</h2>
+                </div>
+                <div class="image-container">
+                    <div class="grid-item1"><img src="DSC_0230.JPG" alt="landscape sample"></div>
+                </div>
+                <div class="image-text">
+                    <p>
+                            Lorem ipsum dolor sit amet, consMorbi suscipit nec diam ut elementum. Fusce sit amet ullamcorper nibh. Vestibulum sodales arcu nec viverra convallis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+                    </p>
+                </div>
+                </div>
+                <div class="container2">
+                    <div class="image-title">
+                        <h2>The Man Himself</h2>
+                    </div>
+                    <div class="image-container">
+                        <div class="grid-item1"><img src="DSC_0230.JPG" alt="landscape sample"></div>
+                    </div>
+                    <div class="image-text">
+                        <p>
+                                Lorem ipsum dolor sit amet, consMorbi suscipit nec diam ut elementum. Fusce sit amet ullamcorper nibh. Vestibulum sodales arcu nec viverra convallis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+                        </p>
+                    </div>
+                    </div>
+            <script>
+                var menuButton = document.getElementsByClassName("hamburger")[0];
+                var sideBar = document.getElementsByClassName("side-bar")[0];
+                var sideBarBack = document.getElementsByClassName("hamburger1")[0];
+               menuButton.addEventListener('click',function(){
+                    // sideBar.classList.add('open-side-bar');
+                if(window.screen.width<=500){
+                        sideBar.style.width = '58vw';}
+                    else
+                    {
+                        sideBar.style.width = '18vw'}
+                    });
+            
+                sideBarBack.addEventListener('click',function(){
+                    // sideBar.classList.add('open-side-bar');
+                    sideBar.style.width = '0vw';
+                 });
+               </script>
 </body>
 </html>

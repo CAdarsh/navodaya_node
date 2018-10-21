@@ -172,7 +172,17 @@
         background-color: black;
         transition: 1s opacity;
     }
+    @media only screen and (min-width:500px){
+        iframe{
+            height: 63vh;
+        }
+        .video-container{
+            height: 65vh;
+            margin-left: 7%;
+        }
+    }
     </style>
+   
    <div class="side-bar">
         <div class="side-bar-back">
         <span class="side-bar-header"> MENU </span>    
@@ -189,7 +199,7 @@
     </div>
 <nav>
         <div class="nav-adjuster">
-        <span class="hamburger">
+        <span class="hamburger">￼
                 <img class = "hamburgerIcon" src="Asset 1.svg" alt="menu">
         </span>
         <span class="logo-main">NH.</span>    
@@ -219,29 +229,22 @@
     </div>
 
     <script>
-            var menuButton = document.getElementsByClassName("hamburger")[0];
-            var sideBar = document.getElementsByClassName("side-bar")[0];
-            var sideBarBack = document.getElementsByClassName("hamburger1")[0];
-            console.log("Hello");
-           menuButton.addEventListener('click',function(){
-                // sideBar.classList.add('open-side-bar');
-                
-               sideBar.style.width = '58vw'; });
-        
-            sideBarBack.addEventListener('click',function(){
-                // sideBar.classList.add('open-side-bar');
-                sideBar.style.width = '0vw';
-             });
-            function slide_back(){
-               sideBar.style.width = '0vw';
-           }
-           
-       var home_logo = document.getElementsByClassName("logo-main")[0];
-       home_logo.addEventListener('click',function(){
-          window.open("/"); 
-       });
-   
+        var menuButton = document.getElementsByClassName("hamburger")[0];
+        var sideBar = document.getElementsByClassName("side-bar")[0];
+        var sideBarBack = document.getElementsByClassName("hamburger1")[0];
+       menuButton.addEventListener('click',function(){
+            // sideBar.classList.add('open-side-bar');
+        if(window.screen.width<=500){
+                sideBar.style.width = '58vw';}
+            else
+            {
+                sideBar.style.width = '18vw'}
+            });
     
-           </script>
+        sideBarBack.addEventListener('click',function(){
+            // sideBar.classList.add('open-side-bar');
+            sideBar.style.width = '0vw';
+         });
+       </script>
 </body>
 </html>
