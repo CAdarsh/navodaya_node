@@ -1,6 +1,8 @@
 var express = require('express');
 var AWS = require('aws-sdk');
 var app = express();
+var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
+var xhr = new XMLHttpRequest();
 app.use(express.static('./public'));
 var value = "Adarsh";
 app.get('/',(req,res) => {
@@ -12,7 +14,6 @@ app.get("/photo_gallery",(req,res) => {
 app.get("/video_gallery",(req,res) => {
     res.render('videoG.ejs');
 });
-
 
 app.listen(8080, function () {
   console.log('Example app listening on port 80!');
